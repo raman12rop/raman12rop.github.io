@@ -575,9 +575,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var root = document.documentElement;
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Hero image fallback chain */
+  /* Hero image fallback chain (avatar.jpg removed) */
   var heroImg = document.getElementById('hero-embedded-img');
-  var files = ['4097.jpg', 'image_e5193e.jpg', 'banner.jpg', 'avatar.jpg'], fi = 0;
+  var files = ['4097.jpg', 'image_e5193e.jpg', 'banner.jpg'], fi = 0;
   heroImg.addEventListener('error', function () { if (++fi < files.length) heroImg.src = files[fi]; });
 
   /* Project logos: swap in a letter badge if an image is missing */
